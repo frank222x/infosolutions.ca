@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<title>Info Solutions | Services informatiques</title>
+<title>Info Solutions | Services informatiques à domicile</title>
 
-<meta name="description" content="Info Solutions offre des services informatiques, réparation et optimisation de PC, configuration Wi-Fi, sécurité informatique et maison connectée.">
+<meta name="description"
+    content="Info Solutions offre des services informatiques pour particuliers et petites entreprises : réparation et optimisation de PC Windows, Linux et Mac, Wi-Fi, sécurité informatique, mots de passe et maison connectée.">
+
+<meta name="keywords"
+    content="informatique, réparation ordinateur, optimisation PC, Windows, Linux, Mac, Wi-Fi, sécurité informatique, antivirus, mots de passe, maison connectée, IoT, petites entreprises">
+
+<meta name="author" content="Info Solutions">
+
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Info Solutions | Services informatiques">
+<meta property="og:description"
+    content="Des solutions informatiques simples, efficaces et adaptées à vos besoins.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://solutionsinfo.net/">
+
+<link rel="canonical" href="https://solutionsinfo.net/">
 
 <style>
     * {
@@ -19,6 +36,7 @@
 
     html {
         scroll-behavior: smooth;
+        scroll-padding-top: 85px;
     }
 
     body {
@@ -33,7 +51,14 @@
         text-decoration: none;
     }
 
-    /* Navigation */
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     header {
         position: fixed;
@@ -41,7 +66,7 @@
         left: 0;
         width: 100%;
         z-index: 1000;
-        background: rgba(11, 15, 20, 0.92);
+        background: rgba(11, 15, 20, 0.94);
         border-bottom: 1px solid #1e293b;
         backdrop-filter: blur(10px);
     }
@@ -59,6 +84,7 @@
         font-size: 1.5rem;
         font-weight: bold;
         color: #38bdf8;
+        letter-spacing: 0.5px;
     }
 
     .nav-links {
@@ -69,14 +95,17 @@
 
     .nav-links a {
         color: #cbd5e1;
-        transition: 0.3s;
+        font-size: 0.95rem;
+        transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
         color: #38bdf8;
     }
 
-    /* Hero */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
         min-height: 100vh;
@@ -84,21 +113,38 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        padding: 120px 25px 80px;
+        padding: 140px 25px 100px;
 
         background:
-            radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.15), transparent 40%),
+            radial-gradient(circle at 50% 30%,
+                rgba(14, 165, 233, 0.16),
+                transparent 42%),
+            radial-gradient(circle at 15% 85%,
+                rgba(14, 165, 233, 0.06),
+                transparent 30%),
             #0b0f14;
     }
 
     .hero-content {
-        max-width: 850px;
+        max-width: 900px;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 7px 15px;
+        margin-bottom: 25px;
+        border: 1px solid #1e40af;
+        border-radius: 50px;
+        background: rgba(14, 165, 233, 0.08);
+        color: #7dd3fc;
+        font-size: 0.9rem;
     }
 
     .hero h1 {
-        font-size: clamp(3rem, 8vw, 5.5rem);
-        margin-bottom: 20px;
-        letter-spacing: -2px;
+        font-size: clamp(3rem, 8vw, 5.8rem);
+        line-height: 1.05;
+        margin-bottom: 25px;
+        letter-spacing: -3px;
     }
 
     .hero h1 span {
@@ -108,19 +154,30 @@
     .hero p {
         font-size: 1.3rem;
         color: #94a3b8;
-        max-width: 650px;
-        margin: 0 auto 35px;
+        max-width: 700px;
+        margin: 0 auto 40px;
     }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
 
     .button {
         display: inline-block;
         padding: 14px 28px;
         border-radius: 8px;
         background: #0ea5e9;
-        color: white;
+        color: #ffffff;
         font-weight: bold;
-        transition: 0.3s;
-        margin: 5px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
     }
 
     .button:hover {
@@ -135,9 +192,12 @@
 
     .button-secondary:hover {
         background: #1e293b;
+        border-color: #475569;
     }
 
-    /* Sections */
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
         padding: 100px 25px;
@@ -160,9 +220,13 @@
 
     .section-title p {
         color: #94a3b8;
+        max-width: 650px;
+        margin: auto;
     }
 
-    /* Services */
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services {
         background: #0f1720;
@@ -170,7 +234,7 @@
 
     .services-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         gap: 22px;
     }
 
@@ -179,17 +243,25 @@
         border: 1px solid #1e293b;
         border-radius: 14px;
         padding: 30px;
-        transition: 0.3s;
+        transition: all 0.3s ease;
     }
 
     .service-card:hover {
         transform: translateY(-6px);
         border-color: #0ea5e9;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
     }
 
     .service-icon {
-        font-size: 2.2rem;
-        margin-bottom: 18px;
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        background: rgba(14, 165, 233, 0.1);
+        font-size: 1.8rem;
     }
 
     .service-card h3 {
@@ -201,14 +273,88 @@
         color: #94a3b8;
     }
 
-    /* À propos */
+    /* =========================
+       POUR QUI
+    ========================= */
+
+    .audience {
+        background: #0b0f14;
+    }
+
+    .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .audience-card {
+        padding: 35px;
+        border: 1px solid #1e293b;
+        border-radius: 14px;
+        background: #111827;
+    }
+
+    .audience-card h3 {
+        margin-bottom: 15px;
+        font-size: 1.4rem;
+        color: #38bdf8;
+    }
+
+    .audience-card p {
+        color: #94a3b8;
+    }
+
+    /* =========================
+       APPROCHE
+    ========================= */
+
+    .approach {
+        background: #0f1720;
+    }
+
+    .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+    }
+
+    .approach-card {
+        text-align: center;
+        padding: 25px;
+    }
+
+    .approach-number {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 18px;
+        border-radius: 50%;
+        background: #0ea5e9;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .approach-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .approach-card p {
+        color: #94a3b8;
+    }
+
+    /* =========================
+       À PROPOS
+    ========================= */
 
     .about {
         text-align: center;
     }
 
     .about-content {
-        max-width: 750px;
+        max-width: 800px;
         margin: auto;
     }
 
@@ -218,7 +364,14 @@
         margin-bottom: 20px;
     }
 
-    /* Contact */
+    .highlight {
+        color: #38bdf8;
+        font-weight: bold;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact {
         background: #0f1720;
@@ -226,7 +379,7 @@
     }
 
     .contact-box {
-        max-width: 700px;
+        max-width: 750px;
         margin: auto;
     }
 
@@ -242,27 +395,63 @@
         gap: 15px;
     }
 
-    /* Footer */
+    .contact-note {
+        margin-top: 25px;
+        color: #64748b;
+        font-size: 0.9rem;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
         text-align: center;
-        padding: 30px 20px;
+        padding: 35px 20px;
         background: #070a0e;
         color: #64748b;
         font-size: 0.9rem;
     }
 
-    /* Mobile */
+    .footer-name {
+        color: #38bdf8;
+        font-weight: bold;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+        .services-grid,
+        .approach-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
 
     @media (max-width: 700px) {
 
+        nav {
+            padding: 16px 18px;
+        }
+
         .nav-links {
             gap: 12px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
 
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .hero {
+            padding: 120px 20px 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 13vw, 4.5rem);
+            letter-spacing: -2px;
         }
 
         .hero p {
@@ -272,6 +461,40 @@
         section {
             padding: 75px 20px;
         }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+        }
+
+        .services-grid,
+        .audience-grid,
+        .approach-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .service-card,
+        .audience-card {
+            padding: 25px;
+        }
+
+        .hero-buttons .button {
+            width: 100%;
+            max-width: 320px;
+        }
+
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info .button {
+            width: 100%;
+            max-width: 320px;
+        }
     }
 </style>
 ```
@@ -280,196 +503,420 @@
 
 <body>
 
+```
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <header>
     <nav>
         <a href="#accueil" class="logo">INFO SOLUTIONS</a>
 
-```
-    <ul class="nav-links">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-```
-
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#approche">Notre approche</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
+
 
 <main>
 
-```
-<!-- Accueil -->
+    <!-- =========================
+         ACCUEIL
+    ========================= -->
 
-<section id="accueil" class="hero">
-    <div class="hero-content">
+    <section id="accueil" class="hero">
 
-        <h1>
-            Vos technologies.<br>
-            <span>Nos solutions.</span>
-        </h1>
+        <div class="hero-content">
 
-        <p>
-            Des services informatiques simples, efficaces et adaptés
-            à vos besoins.
-        </p>
-
-        <a href="#services" class="button">
-            Découvrir nos services
-        </a>
-
-        <a href="#contact" class="button button-secondary">
-            Nous contacter
-        </a>
-
-    </div>
-</section>
-
-
-<!-- Services -->
-
-<section id="services" class="services">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>Nos services</h2>
-            <p>Des solutions pour vos besoins informatiques du quotidien.</p>
-        </div>
-
-        <div class="services-grid">
-
-            <div class="service-card">
-                <div class="service-icon">💻</div>
-                <h3>Réparation & optimisation</h3>
-                <p>
-                    Réparation, configuration et optimisation de PC
-                    Windows, Linux et Mac.
-                </p>
+            <div class="hero-badge">
+                Solutions informatiques pour particuliers et petites entreprises
             </div>
 
-            <div class="service-card">
-                <div class="service-icon">📶</div>
-                <h3>Wi-Fi & périphériques</h3>
-                <p>
-                    Installation et configuration du Wi-Fi ainsi que
-                    connexion de vos périphériques.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🛡️</div>
-                <h3>Sécurité informatique</h3>
-                <p>
-                    Protection contre les virus et amélioration de
-                    la sécurité de vos appareils.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🔐</div>
-                <h3>Gestion des mots de passe</h3>
-                <p>
-                    Configuration et accompagnement avec les
-                    gestionnaires de mots de passe.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon">🏠</div>
-                <h3>Maison connectée</h3>
-                <p>
-                    Configuration et intégration de vos appareils
-                    connectés et solutions IoT.
-                </p>
-            </div>
-
-            <div class="service-card">
-                <div class="service-icon"></div>
-                <h3>Services aux petites entreprises</h3>
-                <p>
-                    Sauvegardes, Sécurité, Mises à jours, Installation et Configuration.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- À propos -->
-
-<section id="apropos" class="about">
-
-    <div class="container">
-
-        <div class="section-title">
-            <h2>À propos</h2>
-        </div>
-
-        <div class="about-content">
+            <h1>
+                Vos technologies.<br>
+                <span>Nos solutions.</span>
+            </h1>
 
             <p>
-                <strong>Info Solutions</strong> vous accompagne dans
-                vos besoins informatiques, que ce soit pour une nouvelle architecture, résoudre
-                un problème, améliorer les performances de votre
-                ordinateur ou configurer vos appareils.
+                Des services informatiques simples, efficaces et adaptés
+                à vos besoins, que ce soit à la maison ou pour votre petite entreprise.
             </p>
 
-            <p>
-                L'objectif est simple : vous offrir des solutions
-                claires, efficaces et adaptées à vos besoins.
-            </p>
+            <div class="hero-buttons">
+
+                <a href="#services" class="button">
+                    Découvrir nos services
+                </a>
+
+                <a href="#contact" class="button button-secondary">
+                    Nous contacter
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- Contact -->
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
-<section id="contact" class="contact">
+    <section id="services" class="services">
 
-    <div class="container">
-
-        <div class="contact-box">
+        <div class="container">
 
             <div class="section-title">
-                <h2>Besoin d'aide?</h2>
+
+                <h2>Nos services</h2>
+
                 <p>
-                    N'hésitez pas à communiquer avec nous pour discuter
-                    de vos besoins.
+                    Des solutions concrètes pour simplifier, sécuriser
+                    et améliorer votre environnement informatique.
                 </p>
+
             </div>
 
-            <div class="contact-info">
 
-                <a href="tel:5146516091" class="button">
-                    📞 514-651-6091
-                </a>
+            <div class="services-grid">
 
-                <a href="mailto:francis.langlois@proton.me"
-                   class="button button-secondary">
-                    ✉️ Envoyer un courriel
-                </a>
+                <div class="service-card">
+
+                    <div class="service-icon">💻</div>
+
+                    <h3>Réparation & optimisation</h3>
+
+                    <p>
+                        Réparation, configuration et optimisation de PC
+                        Windows, Linux et Mac. Amélioration des performances
+                        et résolution des problèmes courants.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">📶</div>
+
+                    <h3>Wi-Fi & périphériques</h3>
+
+                    <p>
+                        Installation et configuration du réseau Wi-Fi,
+                        connexion de vos ordinateurs, imprimantes,
+                        téléviseurs et autres périphériques.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🛡️</div>
+
+                    <h3>Sécurité informatique</h3>
+
+                    <p>
+                        Renforcement de la sécurité de vos appareils,
+                        protection contre les logiciels malveillants
+                        et bonnes pratiques pour réduire les risques.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🔐</div>
+
+                    <h3>Gestion des mots de passe</h3>
+
+                    <p>
+                        Installation et configuration de gestionnaires
+                        de mots de passe et accompagnement pour améliorer
+                        la sécurité de vos comptes en ligne.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🏠</div>
+
+                    <h3>Maison connectée</h3>
+
+                    <p>
+                        Configuration et intégration de vos appareils
+                        connectés et solutions IoT afin de créer un
+                        environnement simple et fonctionnel.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-icon">🏢</div>
+
+                    <h3>Services aux petites entreprises</h3>
+
+                    <p>
+                        Installation et configuration, sauvegardes,
+                        sécurité, mises à jour et soutien informatique
+                        adapté aux besoins des petites entreprises.
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
-```
+
+    <!-- =========================
+         POUR QUI
+    ========================= -->
+
+    <section class="audience">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Des solutions adaptées à vos besoins</h2>
+
+                <p>
+                    Que vous soyez un particulier ou une petite entreprise,
+                    nous vous aidons à tirer le meilleur de vos technologies.
+                </p>
+
+            </div>
+
+
+            <div class="audience-grid">
+
+                <div class="audience-card">
+
+                    <h3>👤 Particuliers</h3>
+
+                    <p>
+                        Ordinateur lent, problème de Wi-Fi, installation
+                        d'une imprimante, configuration d'un nouvel appareil,
+                        sécurité informatique ou maison connectée :
+                        nous vous aidons à remettre vos technologies en ordre.
+                    </p>
+
+                </div>
+
+
+                <div class="audience-card">
+
+                    <h3>🏢 Petites entreprises</h3>
+
+                    <p>
+                        Mise en place d'équipements, sauvegardes,
+                        mises à jour, sécurité, configuration des postes
+                        et accompagnement informatique pour les besoins
+                        courants de votre entreprise.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         NOTRE APPROCHE
+    ========================= -->
+
+    <section id="approche" class="approach">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Notre approche</h2>
+
+                <p>
+                    Une approche simple : comprendre le problème,
+                    trouver la bonne solution et vous expliquer clairement
+                    ce qui a été fait.
+                </p>
+
+            </div>
+
+
+            <div class="approach-grid">
+
+                <div class="approach-card">
+
+                    <div class="approach-number">1</div>
+
+                    <h3>Évaluer</h3>
+
+                    <p>
+                        Nous identifions la cause du problème et évaluons
+                        votre environnement informatique.
+                    </p>
+
+                </div>
+
+
+                <div class="approach-card">
+
+                    <div class="approach-number">2</div>
+
+                    <h3>Résoudre</h3>
+
+                    <p>
+                        Nous mettons en place une solution adaptée à vos
+                        besoins et à votre équipement.
+                    </p>
+
+                </div>
+
+
+                <div class="approach-card">
+
+                    <div class="approach-number">3</div>
+
+                    <h3>Expliquer</h3>
+
+                    <p>
+                        Nous vous expliquons simplement les changements
+                        effectués et les bonnes pratiques à adopter.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         À PROPOS
+    ========================= -->
+
+    <section id="apropos" class="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>À propos d'Info Solutions</h2>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <p>
+                    <strong>Info Solutions</strong> vous accompagne dans
+                    vos besoins informatiques, que ce soit pour mettre en
+                    place une nouvelle configuration, résoudre un problème,
+                    améliorer les performances de votre ordinateur ou
+                    configurer vos appareils.
+                </p>
+
+                <p>
+                    Notre objectif est simple :
+                    <span class="highlight">
+                        vous offrir des solutions claires, efficaces
+                        et adaptées à votre réalité.
+                    </span>
+                </p>
+
+                <p>
+                    Nous privilégions une approche humaine et accessible,
+                    sans jargon inutile, afin que vous compreniez réellement
+                    votre environnement informatique.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div class="section-title">
+
+                    <h2>Besoin d'aide?</h2>
+
+                    <p>
+                        Vous avez un problème informatique ou un projet?
+                        Communiquez avec nous pour discuter de vos besoins.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-info">
+
+                    <a href="tel:+15146516091" class="button">
+                        📞 514-651-6091
+                    </a>
+
+                    <a href="mailto:francis.langlois@proton.me"
+                        class="button button-secondary">
+                        ✉️ Envoyer un courriel
+                    </a>
+
+                </div>
+
+
+                <p class="contact-note">
+                    Nous vous répondrons dans les meilleurs délais.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </main>
 
+
+<!-- =========================
+     PIED DE PAGE
+========================= -->
+
 <footer>
-    © 2026 Info Solutions — Tous droits réservés.
+
+    <p>
+        © 2026 <span class="footer-name">Info Solutions</span>
+        — Tous droits réservés.
+    </p>
+
 </footer>
+```
 
 </body>
+
 </html>
