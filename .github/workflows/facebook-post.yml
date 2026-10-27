@@ -1,0 +1,20 @@
+
+name: Publication quotidienne Solutions Info
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+      timezone: "America/Toronto"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verifier le declenchement
+        run: |
+          echo "Le scenario Solutions Info fonctionne."
+          echo "Prochaine etape : connecter la publication Facebook."
